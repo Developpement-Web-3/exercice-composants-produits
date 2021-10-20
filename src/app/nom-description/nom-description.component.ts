@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nom-description',
@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../shared/shared-styles.css', './nom-description.component.css']
 })
 export class NomDescriptionComponent implements OnInit {
-  nom = 'Nom du produit'; 
-  description = 'Description ....';
+  @Input() nom = ''; 
+  @Input() description = '';
 
   constructor() { }
 
